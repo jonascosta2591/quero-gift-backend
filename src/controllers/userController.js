@@ -1,15 +1,6 @@
 const userModel = require('../models/models');
 const {validarEmail} = require('../utils/validarEmail');
 
-const createTask = async (request, response) => {
-
-  return response.status(201).send(request.headers);
-};
-
-const private = async (request, response) => {
-  return response.status(200).send('ok');
-};
-
 const login = async (request, response) => {
   try{
     const loginAccount = await userModel.login(request.body);
@@ -43,8 +34,6 @@ const register = async (request, response) => {
 };
 
 module.exports = {
-  createTask,
   register,
-  login,
-  private
+  login
 };

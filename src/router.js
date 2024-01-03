@@ -8,7 +8,7 @@ router.post('/register', userController.register);
 
 router.post('/login', userController.login);
 
-router.get('/private', checkToken, userController.private);
+router.get('/add_product', checkToken, userController.private);
 
 
 module.exports = router;
